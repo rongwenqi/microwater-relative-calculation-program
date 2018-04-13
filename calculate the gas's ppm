@@ -1,0 +1,12 @@
+#计算分解产物浓度的程序
+need=1
+print("是否需要计算(不需要请输入回车退出)")
+while need:#while要加冒号
+    concen_cali = input("输入物质1在标气中的浓度:")
+    print("物质1在标气中浓度是：", concen_cali)
+    concen_gcms = input("输入物质1在GCMS中的浓度:")
+    print("物质1在gcms中浓度是：", concen_gcms)
+    concen_cali=int(concen_cali)
+    concen_gcms = int(concen_gcms)
+    ppm = concen_gcms*50/concen_cali
+    print("物质1的ppm(默认标气50ppm)：",ppm)
