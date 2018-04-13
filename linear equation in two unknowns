@@ -1,0 +1,9 @@
+#linear equation in two unknowns 
+
+import math
+
+for a in range(2, 19):
+    for b in range(2, 19):
+        if (a+b==18) and (a*b==72):
+            print(a, b)
+            print("Now the consequence is:",a*b,'\n')
