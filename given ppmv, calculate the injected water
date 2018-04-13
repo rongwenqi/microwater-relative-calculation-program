@@ -1,6 +1,7 @@
 #calculation program
+#水是氧18
 def jisuan():
-    ppm = int(input("请输入"))
+    ppm = int(input("请输入(ppmv"))
     vol1 = (ppm * 1.7 * 0.2 * 20)
     vol = vol1 / (8.314 * 298.15 * 1.10935)
 
