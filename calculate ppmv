@@ -1,5 +1,13 @@
-#given the injected water calculate ppmv
-vol = float(input("请输入（微升：）"))
-ppm = vol *8.314 *298.15 *1.10935/(1.7*0.2*20)
+#给注入体积，算全部气化时候的体积分数
+#水的密度是1g/cm^3
+vol = float(input("请输入注入体积（微升：）"))
+#ppm = float(input("请输入需要的水的体积分数（ppm：）"))
+pressure = float(input("请输入总气压,abs（mPa)："))
+l = float(input("请输入容器体积,默认1.7L。（L）："))
+density= float(input("请输入液体密度，氧18：1.10935，自来水1。（g/cm^3）:"))
+Mass = float(input("请输入液体的摩尔质量,水18（g/mol）:"))
+t = float(input("请输入温度（℃）:"))
 
-print(ppm,"ppmv")
+ppm = vol *8.314 *(273.15+t) *density/(l*pressure*Mass)
+
+print(t,"℃时，注入",vol,"微升液体，如果其全部气化，那么罐体中的水的体积分数就会是：",ppm,"ppm[v]")
